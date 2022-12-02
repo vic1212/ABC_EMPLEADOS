@@ -1,0 +1,9 @@
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\bin\Debug\ABC_EMPLEADOS.exe
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\bin\Debug\ABC_EMPLEADOS.pdb
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.Presentacion.frmEmpleado.resources
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.Properties.Resources.resources
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.csproj.GenerateResource.cache
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.exe
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.pdb
