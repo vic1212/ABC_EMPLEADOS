@@ -19,6 +19,8 @@ namespace ABC_EMPLEADOS.Presentacion
         {
             InitializeComponent();
         }
+        private string fecha_nac;
+        private string fecha_alta;
         Dempleados puesto = new Dempleados();
         private void frmEmpleado_Load(object sender, EventArgs e)
         {
@@ -32,6 +34,9 @@ namespace ABC_EMPLEADOS.Presentacion
             cbxEmpresa.DisplayMember = "Empresa";
             cbxEmpresa.ValueMember = "Id_Empresa";
 
+            //Mostramos los empleados
+            Mostrarempleados(); 
+
 
 
         }
@@ -42,10 +47,9 @@ namespace ABC_EMPLEADOS.Presentacion
         }
 
 
-        public void InsertarClientes()
+        private  void InsertarClientes()
         {
-            string fecha_nac;
-            string fecha_alta;
+         
 
             Dempleados funcion = new Dempleados();
             Lempleados parametros = new Lempleados();
@@ -82,6 +86,7 @@ namespace ABC_EMPLEADOS.Presentacion
                         parametros.IdEmpresa = Convert.ToInt16(cbxEmpresa.SelectedValue);
                         //MessageBox.Show(fecha_alta);
                         funcion.InsertarEmpleados(parametros);
+                        Mostrarempleados();
 
                     }
                    
@@ -93,5 +98,13 @@ namespace ABC_EMPLEADOS.Presentacion
 
 
         }
+
+        private void Mostrarempleados()
+        {
+            Dempleados funcion = new Dempleados();
+            DataTable dt = new DataTable();
+            funcion.MostrarEmpleados(ref dt);
+            dataEmpleados.DataSource = dt;
+        } 
     }
 }

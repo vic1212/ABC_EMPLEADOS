@@ -37,10 +37,25 @@ namespace ABC_EMPLEADOS.Datos
 
         }
 
+        public void MostrarEmpleados(ref DataTable dt)
+        {
+            try
+            {
+                CONEXIONSQLSERVER.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("SP_ConsultarEmpleados", CONEXIONSQLSERVER.conectar);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
 
-      
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CONEXIONSQLSERVER.cerrar();
+            }
 
-
+        }
          public void InsertarEmpleados(Lempleados parametros)
         {
             try

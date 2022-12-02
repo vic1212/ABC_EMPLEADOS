@@ -57,7 +57,10 @@ namespace ABC_EMPLEADOS.Presentacion
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.dataEmpleados = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -358,15 +361,38 @@ namespace ABC_EMPLEADOS.Presentacion
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1426, 77);
+            this.panel7.Size = new System.Drawing.Size(1604, 77);
             this.panel7.TabIndex = 33;
+            // 
+            // dataEmpleados
+            // 
+            this.dataEmpleados.AllowUserToAddRows = false;
+            this.dataEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEmpleados.Location = new System.Drawing.Point(561, 134);
+            this.dataEmpleados.Name = "dataEmpleados";
+            this.dataEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataEmpleados.Size = new System.Drawing.Size(1031, 386);
+            this.dataEmpleados.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(556, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(252, 29);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Listado de empleados";
             // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1426, 646);
+            this.ClientSize = new System.Drawing.Size(1604, 646);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dataEmpleados);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnGuardar);
@@ -401,6 +427,7 @@ namespace ABC_EMPLEADOS.Presentacion
             this.Load += new System.EventHandler(this.frmEmpleado_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +463,7 @@ namespace ABC_EMPLEADOS.Presentacion
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridView dataEmpleados;
+        private System.Windows.Forms.Label label7;
     }
 }
