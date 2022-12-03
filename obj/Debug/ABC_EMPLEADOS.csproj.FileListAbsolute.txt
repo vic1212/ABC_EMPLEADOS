@@ -7,3 +7,5 @@ C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.csproj.Genera
 C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.exe
 C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.pdb
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.Presentacion.Empleados.resources
+C:\Users\LENOVO\source\repos\ABC_EMPLEADOS\obj\Debug\ABC_EMPLEADOS.Presentacion.Puestos.resources

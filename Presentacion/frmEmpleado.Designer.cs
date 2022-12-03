@@ -29,326 +29,15 @@ namespace ABC_EMPLEADOS.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbxSexo = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.dateFechaAlta = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbxPuesto = new System.Windows.Forms.ComboBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbxEmpresa = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dataEmpleados = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.gpControles = new System.Windows.Forms.GroupBox();
-            this.gpControlGuardar = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnEmpleados = new System.Windows.Forms.Button();
+            this.btnPuestos = new System.Windows.Forms.Button();
+            this.panelVisor = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).BeginInit();
-            this.gpControles.SuspendLayout();
-            this.gpControlGuardar.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(18, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(163, 134);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 2);
-            this.panel1.TabIndex = 1;
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApellidos.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellidos.Location = new System.Drawing.Point(163, 146);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(377, 26);
-            this.txtApellidos.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(163, 176);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(377, 2);
-            this.panel2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(18, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Apellidos:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(18, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 29);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Sexo:";
-            // 
-            // cbxSexo
-            // 
-            this.cbxSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.cbxSexo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbxSexo.FormattingEnabled = true;
-            this.cbxSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "Indefinido"});
-            this.cbxSexo.Location = new System.Drawing.Point(163, 198);
-            this.cbxSexo.Name = "cbxSexo";
-            this.cbxSexo.Size = new System.Drawing.Size(377, 33);
-            this.cbxSexo.TabIndex = 7;
-            this.cbxSexo.Text = "Seleccione Sexo";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(18, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Fecha Nac:";
-            // 
-            // dateFechaNac
-            // 
-            this.dateFechaNac.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateFechaNac.Location = new System.Drawing.Point(163, 243);
-            this.dateFechaNac.Name = "dateFechaNac";
-            this.dateFechaNac.Size = new System.Drawing.Size(377, 20);
-            this.dateFechaNac.TabIndex = 11;
-            // 
-            // dateFechaAlta
-            // 
-            this.dateFechaAlta.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateFechaAlta.Location = new System.Drawing.Point(163, 285);
-            this.dateFechaAlta.Name = "dateFechaAlta";
-            this.dateFechaAlta.Size = new System.Drawing.Size(377, 20);
-            this.dateFechaAlta.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(18, 273);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 29);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Fecha Alta:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(18, 318);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 29);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Puesto:";
-            // 
-            // cbxPuesto
-            // 
-            this.cbxPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.cbxPuesto.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbxPuesto.FormattingEnabled = true;
-            this.cbxPuesto.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "Indefinido"});
-            this.cbxPuesto.Location = new System.Drawing.Point(163, 319);
-            this.cbxPuesto.Name = "cbxPuesto";
-            this.cbxPuesto.Size = new System.Drawing.Size(377, 33);
-            this.cbxPuesto.TabIndex = 15;
-            this.cbxPuesto.Text = "Seleccione Puesto";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDireccion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDireccion.Location = new System.Drawing.Point(163, 368);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(377, 26);
-            this.txtDireccion.TabIndex = 21;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(163, 398);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(377, 2);
-            this.panel4.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(18, 368);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 29);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Direccion:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(163, 407);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(377, 26);
-            this.txtEmail.TabIndex = 24;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(163, 437);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(377, 2);
-            this.panel5.TabIndex = 23;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(18, 407);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 29);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Email:";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefono.Location = new System.Drawing.Point(163, 449);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(377, 26);
-            this.txtTelefono.TabIndex = 27;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(163, 479);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(377, 2);
-            this.panel6.TabIndex = 26;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label10.Location = new System.Drawing.Point(18, 449);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 29);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Telefono:";
-            // 
-            // cbxEmpresa
-            // 
-            this.cbxEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.cbxEmpresa.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbxEmpresa.FormattingEnabled = true;
-            this.cbxEmpresa.Location = new System.Drawing.Point(163, 487);
-            this.cbxEmpresa.Name = "cbxEmpresa";
-            this.cbxEmpresa.Size = new System.Drawing.Size(377, 33);
-            this.cbxEmpresa.TabIndex = 29;
-            this.cbxEmpresa.Text = "Seleccione Empresa";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(18, 489);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 29);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Empresa:";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnGuardar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(0, 8);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(141, 55);
-            this.btnGuardar.TabIndex = 30;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.Location = new System.Drawing.Point(163, 104);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(377, 26);
-            this.txtNombre.TabIndex = 31;
             // 
             // label12
             // 
@@ -371,92 +60,50 @@ namespace ABC_EMPLEADOS.Presentacion
             this.panel7.Size = new System.Drawing.Size(1604, 77);
             this.panel7.TabIndex = 33;
             // 
-            // dataEmpleados
+            // flowLayoutPanel1
             // 
-            this.dataEmpleados.AllowUserToAddRows = false;
-            this.dataEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEmpleados.Location = new System.Drawing.Point(561, 134);
-            this.dataEmpleados.Name = "dataEmpleados";
-            this.dataEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataEmpleados.Size = new System.Drawing.Size(1031, 386);
-            this.dataEmpleados.TabIndex = 34;
-            this.dataEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEmpleados_CellClick);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.flowLayoutPanel1.Controls.Add(this.btnEmpleados);
+            this.flowLayoutPanel1.Controls.Add(this.btnPuestos);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 77);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(146, 569);
+            this.flowLayoutPanel1.TabIndex = 34;
             // 
-            // label7
+            // btnEmpleados
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(556, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(252, 29);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Listado de empleados";
+            this.btnEmpleados.BackColor = System.Drawing.Color.White;
+            this.btnEmpleados.Font = new System.Drawing.Font("Roboto", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEmpleados.Location = new System.Drawing.Point(3, 3);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(143, 74);
+            this.btnEmpleados.TabIndex = 0;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
-            // btnActualizar
+            // btnPuestos
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnActualizar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(0, 8);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(141, 55);
-            this.btnActualizar.TabIndex = 36;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnPuestos.BackColor = System.Drawing.Color.White;
+            this.btnPuestos.Font = new System.Drawing.Font("Roboto", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPuestos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPuestos.Location = new System.Drawing.Point(3, 83);
+            this.btnPuestos.Name = "btnPuestos";
+            this.btnPuestos.Size = new System.Drawing.Size(143, 74);
+            this.btnPuestos.TabIndex = 1;
+            this.btnPuestos.Text = "Puestos";
+            this.btnPuestos.UseVisualStyleBackColor = false;
+            this.btnPuestos.Click += new System.EventHandler(this.btnPuestos_Click);
             // 
-            // btnCancelar
+            // panelVisor
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(147, 8);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(141, 55);
-            this.btnCancelar.TabIndex = 36;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // gpControles
-            // 
-            this.gpControles.Controls.Add(this.btnEliminar);
-            this.gpControles.Controls.Add(this.btnCancelar);
-            this.gpControles.Controls.Add(this.btnActualizar);
-            this.gpControles.Location = new System.Drawing.Point(170, 555);
-            this.gpControles.Name = "gpControles";
-            this.gpControles.Size = new System.Drawing.Size(443, 63);
-            this.gpControles.TabIndex = 37;
-            this.gpControles.TabStop = false;
-            // 
-            // gpControlGuardar
-            // 
-            this.gpControlGuardar.Controls.Add(this.btnGuardar);
-            this.gpControlGuardar.Location = new System.Drawing.Point(23, 555);
-            this.gpControlGuardar.Name = "gpControlGuardar";
-            this.gpControlGuardar.Size = new System.Drawing.Size(143, 63);
-            this.gpControlGuardar.TabIndex = 38;
-            this.gpControlGuardar.TabStop = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnEliminar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(294, 8);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(141, 55);
-            this.btnEliminar.TabIndex = 36;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.panelVisor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVisor.Location = new System.Drawing.Point(146, 77);
+            this.panelVisor.Name = "panelVisor";
+            this.panelVisor.Size = new System.Drawing.Size(1458, 569);
+            this.panelVisor.TabIndex = 36;
             // 
             // frmEmpleado
             // 
@@ -464,36 +111,9 @@ namespace ABC_EMPLEADOS.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1604, 646);
-            this.Controls.Add(this.gpControlGuardar);
-            this.Controls.Add(this.gpControles);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataEmpleados);
+            this.Controls.Add(this.panelVisor);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.cbxEmpresa);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.cbxPuesto);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateFechaAlta);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateFechaNac);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbxSexo);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Name = "frmEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmpleado";
@@ -501,50 +121,17 @@ namespace ABC_EMPLEADOS.Presentacion
             this.Load += new System.EventHandler(this.frmEmpleado_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).EndInit();
-            this.gpControles.ResumeLayout(false);
-            this.gpControlGuardar.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtApellidos;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbxSexo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateFechaNac;
-        private System.Windows.Forms.DateTimePicker dateFechaAlta;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbxPuesto;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbxEmpresa;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView dataEmpleados;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.GroupBox gpControles;
-        private System.Windows.Forms.GroupBox gpControlGuardar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnEmpleados;
+        private System.Windows.Forms.Button btnPuestos;
+        private System.Windows.Forms.Panel panelVisor;
     }
 }
