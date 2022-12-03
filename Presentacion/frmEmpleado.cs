@@ -23,6 +23,7 @@ namespace ABC_EMPLEADOS.Presentacion
         private string fecha_nac;
         private string fecha_alta;
         Dempleados puesto = new Dempleados();
+
         private void frmEmpleado_Load(object sender, EventArgs e)
         {
             //Cargamos los datos de empresa al comboboxPuesto
@@ -40,10 +41,6 @@ namespace ABC_EMPLEADOS.Presentacion
 
             gpControles.Visible = false;
           
-           
-
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,11 +48,73 @@ namespace ABC_EMPLEADOS.Presentacion
             InsertarEmpleado();
         }
 
-
-
-        private  void InsertarEmpleado()
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
-         
+            ActualizarEmpleado();
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarEmpleado();
+        }
+
+
+
+        private void dataEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Idempleado  =Convert.ToInt32(dataEmpleados.SelectedCells[0].Value.ToString());
+            txtNombre.Text = dataEmpleados.SelectedCells[1].Value.ToString();
+            txtApellidos.Text = dataEmpleados.SelectedCells[2].Value.ToString();
+            cbxSexo.Text = dataEmpleados.SelectedCells[3].Value.ToString();
+            dateFechaNac.Value = Convert.ToDateTime(dataEmpleados.SelectedCells[4].Value.ToString());
+            dateFechaAlta.Value = Convert.ToDateTime(dataEmpleados.SelectedCells[5].Value.ToString());
+            cbxPuesto.Text = dataEmpleados.SelectedCells[6].Value.ToString();
+            txtDireccion.Text = dataEmpleados.SelectedCells[7].Value.ToString();
+            txtEmail.Text = dataEmpleados.SelectedCells[8].Value.ToString();
+            txtTelefono.Text = dataEmpleados.SelectedCells[9].Value.ToString();
+            cbxEmpresa.Text = dataEmpleados.SelectedCells[10].Value.ToString();
+            gpControles.Visible = true;
+            gpControlGuardar.Visible = false;
+          
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            gpControlGuardar.Visible = true;
+            gpControles.Visible = false;
+            LimpiarCampos();
+
+          
+
+        }
+
+       
+
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Text = " ";
+            txtApellidos.Text = " ";
+            cbxSexo.Text = " ";
+            cbxPuesto.Text = " ";
+            txtDireccion.Text = " ";
+            txtEmail.Text = " ";
+            txtTelefono.Text = " ";
+            cbxEmpresa.Text = " ";
+        }
+
+
+        private void Mostrarempleados()
+        {
+            Dempleados funcion = new Dempleados();
+            DataTable dt = new DataTable();
+            funcion.MostrarEmpleados(ref dt);
+            dataEmpleados.DataSource = dt;
+        }
+
+        private void InsertarEmpleado()
+        {
+
 
             Dempleados funcion = new Dempleados();
             Lempleados parametros = new Lempleados();
@@ -95,10 +154,10 @@ namespace ABC_EMPLEADOS.Presentacion
                         Mostrarempleados();
 
                     }
-                   
+
                 }
 
-             
+
 
             }
 
@@ -157,60 +216,19 @@ namespace ABC_EMPLEADOS.Presentacion
             }
         }
 
-   
-        private void Mostrarempleados()
+        private void EliminarEmpleado()
         {
             Dempleados funcion = new Dempleados();
-            DataTable dt = new DataTable();
-            funcion.MostrarEmpleados(ref dt);
-            dataEmpleados.DataSource = dt;
-        }
-
-        private void dataEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Idempleado  =Convert.ToInt32(dataEmpleados.SelectedCells[0].Value.ToString());
-            txtNombre.Text = dataEmpleados.SelectedCells[1].Value.ToString();
-            txtApellidos.Text = dataEmpleados.SelectedCells[2].Value.ToString();
-            cbxSexo.Text = dataEmpleados.SelectedCells[3].Value.ToString();
-            dateFechaNac.Value = Convert.ToDateTime(dataEmpleados.SelectedCells[4].Value.ToString());
-            dateFechaAlta.Value = Convert.ToDateTime(dataEmpleados.SelectedCells[5].Value.ToString());
-            cbxPuesto.Text = dataEmpleados.SelectedCells[6].Value.ToString();
-            txtDireccion.Text = dataEmpleados.SelectedCells[7].Value.ToString();
-            txtEmail.Text = dataEmpleados.SelectedCells[8].Value.ToString();
-            txtTelefono.Text = dataEmpleados.SelectedCells[9].Value.ToString();
-            cbxEmpresa.Text = dataEmpleados.SelectedCells[10].Value.ToString();
-            gpControles.Visible = true;
-            gpControlGuardar.Visible = false;
-          
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            gpControlGuardar.Visible = true;
-            gpControles.Visible = false;
+            Lempleados parametros = new Lempleados();
+            parametros.Id_Empleado = Idempleado;
+            funcion.Eliminarempleado(parametros);
             LimpiarCampos();
-
-          
+            gpControles.Visible = false;
+            Mostrarempleados();
+            gpControlGuardar.Visible = true;
 
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarEmpleado();
-        }
-
-
-        private void LimpiarCampos()
-        {
-            txtNombre.Text = " ";
-            txtApellidos.Text = " ";
-            cbxSexo.Text = " ";
-            cbxPuesto.Text = " ";
-            txtDireccion.Text = " ";
-            txtEmail.Text = " ";
-            txtTelefono.Text = " ";
-            cbxEmpresa.Text = " ";
-        }
+       
     }
 }

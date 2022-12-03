@@ -119,5 +119,28 @@ namespace ABC_EMPLEADOS.Datos
                 CONEXIONSQLSERVER.cerrar();
             }
         }
+
+
+        public void Eliminarempleado(Lempleados parametros)
+        {
+            try
+            {
+                CONEXIONSQLSERVER.abrir();
+                SqlCommand cmd = new SqlCommand("SP_EliminarEmpleado", CONEXIONSQLSERVER.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID_EMPLEADO", parametros.Id_Empleado);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Empleado Eliminado");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CONEXIONSQLSERVER.cerrar();
+            }
+
+        }
     }
 }

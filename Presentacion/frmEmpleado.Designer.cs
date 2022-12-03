@@ -63,6 +63,7 @@ namespace ABC_EMPLEADOS.Presentacion
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gpControles = new System.Windows.Forms.GroupBox();
             this.gpControlGuardar = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).BeginInit();
             this.gpControles.SuspendLayout();
@@ -424,11 +425,12 @@ namespace ABC_EMPLEADOS.Presentacion
             // 
             // gpControles
             // 
+            this.gpControles.Controls.Add(this.btnEliminar);
             this.gpControles.Controls.Add(this.btnCancelar);
             this.gpControles.Controls.Add(this.btnActualizar);
             this.gpControles.Location = new System.Drawing.Point(170, 555);
             this.gpControles.Name = "gpControles";
-            this.gpControles.Size = new System.Drawing.Size(295, 63);
+            this.gpControles.Size = new System.Drawing.Size(443, 63);
             this.gpControles.TabIndex = 37;
             this.gpControles.TabStop = false;
             // 
@@ -440,6 +442,21 @@ namespace ABC_EMPLEADOS.Presentacion
             this.gpControlGuardar.Size = new System.Drawing.Size(143, 63);
             this.gpControlGuardar.TabIndex = 38;
             this.gpControlGuardar.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(294, 8);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(141, 55);
+            this.btnEliminar.TabIndex = 36;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmEmpleado
             // 
@@ -528,5 +545,6 @@ namespace ABC_EMPLEADOS.Presentacion
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox gpControles;
         private System.Windows.Forms.GroupBox gpControlGuardar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
