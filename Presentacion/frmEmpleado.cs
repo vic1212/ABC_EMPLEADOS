@@ -19,6 +19,7 @@ namespace ABC_EMPLEADOS.Presentacion
         {
             InitializeComponent();
         }
+        public int Idempleado ;
         private string fecha_nac;
         private string fecha_alta;
         Dempleados puesto = new Dempleados();
@@ -35,7 +36,11 @@ namespace ABC_EMPLEADOS.Presentacion
             cbxEmpresa.ValueMember = "Id_Empresa";
 
             //Mostramos los empleados
-            Mostrarempleados(); 
+            Mostrarempleados();
+
+            gpControles.Visible = false;
+          
+           
 
 
 
@@ -43,11 +48,12 @@ namespace ABC_EMPLEADOS.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InsertarClientes();
+            InsertarEmpleado();
         }
 
 
-        private  void InsertarClientes()
+
+        private  void InsertarEmpleado()
         {
          
 
@@ -85,7 +91,7 @@ namespace ABC_EMPLEADOS.Presentacion
                         parametros.Telefono = txtTelefono.Text;
                         parametros.IdEmpresa = Convert.ToInt16(cbxEmpresa.SelectedValue);
                         //MessageBox.Show(fecha_alta);
-                        funcion.InsertarEmpleados(parametros);
+                        funcion.Insertarempleados(parametros);
                         Mostrarempleados();
 
                     }
@@ -99,12 +105,112 @@ namespace ABC_EMPLEADOS.Presentacion
 
         }
 
+        private void ActualizarEmpleado()
+        {
+            Dempleados funcion = new Dempleados();
+            Lempleados parametros = new Lempleados();
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellidos.Text)
+                || cbxSexo.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("No debe dejar campos vacios");
+            }
+            else
+            {
+                if (!(dateFechaNac.Checked || dateFechaAlta.Checked))
+                {
+                    MessageBox.Show("Debe seleccionar una fecha");
+                }
+                else
+                {
+                    if (cbxPuesto.SelectedIndex.Equals(-1) || string.IsNullOrEmpty(txtDireccion.Text)
+                        || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtTelefono.Text)
+                        || cbxEmpresa.SelectedIndex.Equals(-1))
+                    {
+                        MessageBox.Show("No debe dejar campos vacios");
+                    }
+                    else
+                    {
+                        parametros.Id_Empleado = Idempleado;
+                        parametros.Nombre = txtNombre.Text;
+                        parametros.Apellidos = txtApellidos.Text;
+                        parametros.Sexo = cbxSexo.GetItemText(cbxSexo.SelectedItem);
+                        parametros.Fecha_Nacimiento = fecha_nac = Convert.ToString(dateFechaNac.Value.Date.ToString("yyyy-MM-dd"));
+                        parametros.Fecha_Alta = fecha_alta = Convert.ToString(dateFechaAlta.Value.Date.ToString("yyyy-MM-dd"));
+                        parametros.IdPuesto = Convert.ToInt16(cbxPuesto.SelectedValue);
+                        parametros.Direccion = txtDireccion.Text;
+                        parametros.Email = txtEmail.Text;
+                        parametros.Telefono = txtTelefono.Text;
+                        parametros.IdEmpresa = Convert.ToInt16(cbxEmpresa.SelectedValue);
+                        //MessageBox.Show(fecha_alta);
+                        funcion.Editarempleados(parametros);
+                        LimpiarCampos();
+                        gpControles.Visible = false;
+                        Mostrarempleados();
+                        gpControlGuardar.Visible = true;
+
+                    }
+
+                }
+
+
+
+            }
+        }
+
+   
         private void Mostrarempleados()
         {
             Dempleados funcion = new Dempleados();
             DataTable dt = new DataTable();
             funcion.MostrarEmpleados(ref dt);
             dataEmpleados.DataSource = dt;
-        } 
+        }
+
+        private void dataEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Idempleado  =Convert.ToInt32(dataEmpleados.SelectedCells[0].Value.ToString());
+            txtNombre.Text = dataEmpleados.SelectedCells[1].Value.ToString();
+            txtApellidos.Text = dataEmpleados.SelectedCells[2].Value.ToString();
+            cbxSexo.Text = dataEmpleados.SelectedCells[3].Value.ToString();
+            dateFechaNac.Value = Convert.ToDateTime(dataEmpleados.SelectedCells[4].Value.ToString());
+            dateFechaAlta.Value = Convert.ToDateTime(dataEmpleados.SelectedCells[5].Value.ToString());
+            cbxPuesto.Text = dataEmpleados.SelectedCells[6].Value.ToString();
+            txtDireccion.Text = dataEmpleados.SelectedCells[7].Value.ToString();
+            txtEmail.Text = dataEmpleados.SelectedCells[8].Value.ToString();
+            txtTelefono.Text = dataEmpleados.SelectedCells[9].Value.ToString();
+            cbxEmpresa.Text = dataEmpleados.SelectedCells[10].Value.ToString();
+            gpControles.Visible = true;
+            gpControlGuardar.Visible = false;
+          
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            gpControlGuardar.Visible = true;
+            gpControles.Visible = false;
+            LimpiarCampos();
+
+          
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarEmpleado();
+        }
+
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Text = " ";
+            txtApellidos.Text = " ";
+            cbxSexo.Text = " ";
+            cbxPuesto.Text = " ";
+            txtDireccion.Text = " ";
+            txtEmail.Text = " ";
+            txtTelefono.Text = " ";
+            cbxEmpresa.Text = " ";
+        }
     }
 }

@@ -59,8 +59,14 @@ namespace ABC_EMPLEADOS.Presentacion
             this.panel7 = new System.Windows.Forms.Panel();
             this.dataEmpleados = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.gpControles = new System.Windows.Forms.GroupBox();
+            this.gpControlGuardar = new System.Windows.Forms.GroupBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).BeginInit();
+            this.gpControles.SuspendLayout();
+            this.gpControlGuardar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -324,7 +330,7 @@ namespace ABC_EMPLEADOS.Presentacion
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnGuardar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(27, 579);
+            this.btnGuardar.Location = new System.Drawing.Point(0, 8);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(141, 55);
             this.btnGuardar.TabIndex = 30;
@@ -373,6 +379,7 @@ namespace ABC_EMPLEADOS.Presentacion
             this.dataEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataEmpleados.Size = new System.Drawing.Size(1031, 386);
             this.dataEmpleados.TabIndex = 34;
+            this.dataEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEmpleados_CellClick);
             // 
             // label7
             // 
@@ -385,17 +392,67 @@ namespace ABC_EMPLEADOS.Presentacion
             this.label7.TabIndex = 35;
             this.label7.Text = "Listado de empleados";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(0, 8);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(141, 55);
+            this.btnActualizar.TabIndex = 36;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(147, 8);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(141, 55);
+            this.btnCancelar.TabIndex = 36;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // gpControles
+            // 
+            this.gpControles.Controls.Add(this.btnCancelar);
+            this.gpControles.Controls.Add(this.btnActualizar);
+            this.gpControles.Location = new System.Drawing.Point(170, 555);
+            this.gpControles.Name = "gpControles";
+            this.gpControles.Size = new System.Drawing.Size(295, 63);
+            this.gpControles.TabIndex = 37;
+            this.gpControles.TabStop = false;
+            // 
+            // gpControlGuardar
+            // 
+            this.gpControlGuardar.Controls.Add(this.btnGuardar);
+            this.gpControlGuardar.Location = new System.Drawing.Point(23, 555);
+            this.gpControlGuardar.Name = "gpControlGuardar";
+            this.gpControlGuardar.Size = new System.Drawing.Size(143, 63);
+            this.gpControlGuardar.TabIndex = 38;
+            this.gpControlGuardar.TabStop = false;
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1604, 646);
+            this.Controls.Add(this.gpControlGuardar);
+            this.Controls.Add(this.gpControles);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataEmpleados);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cbxEmpresa);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtTelefono);
@@ -428,6 +485,8 @@ namespace ABC_EMPLEADOS.Presentacion
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).EndInit();
+            this.gpControles.ResumeLayout(false);
+            this.gpControlGuardar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,5 +524,9 @@ namespace ABC_EMPLEADOS.Presentacion
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView dataEmpleados;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.GroupBox gpControles;
+        private System.Windows.Forms.GroupBox gpControlGuardar;
     }
 }

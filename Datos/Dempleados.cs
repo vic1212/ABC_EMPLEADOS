@@ -56,7 +56,7 @@ namespace ABC_EMPLEADOS.Datos
             }
 
         }
-         public void InsertarEmpleados(Lempleados parametros)
+         public void Insertarempleados(Lempleados parametros)
         {
             try
             {
@@ -78,6 +78,39 @@ namespace ABC_EMPLEADOS.Datos
 
             }
             catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CONEXIONSQLSERVER.cerrar();
+            }
+        }
+
+        public void Editarempleados(Lempleados parametros)
+        {
+            try
+            {
+                CONEXIONSQLSERVER.abrir();
+                SqlCommand cmd = new SqlCommand("SP_EditarEmpleado", CONEXIONSQLSERVER.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID_EMPLEADO",parametros.Id_Empleado);
+                cmd.Parameters.AddWithValue("@NOMBRE", parametros.Nombre);
+                cmd.Parameters.AddWithValue("@APELLIDOS", parametros.Apellidos);
+                cmd.Parameters.AddWithValue("@SEXO", parametros.Sexo);
+                cmd.Parameters.AddWithValue("@FECHA_NACIMIENTO", parametros.Fecha_Nacimiento);
+                cmd.Parameters.AddWithValue("@FECHA_ALTA", parametros.Fecha_Alta);
+                cmd.Parameters.AddWithValue("@ID_PUESTO", parametros.IdPuesto);
+                cmd.Parameters.AddWithValue("@DIRECCION", parametros.Direccion);
+                cmd.Parameters.AddWithValue("@EMAIL", parametros.Email);
+                cmd.Parameters.AddWithValue("@TELEFONO", parametros.Telefono);
+                cmd.Parameters.AddWithValue("@ID_EMPRESA", parametros.IdEmpresa);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Empleado Actualizado");
+                
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
