@@ -362,7 +362,7 @@ namespace ABC_EMPLEADOS.Presentacion
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel6.Location = new System.Drawing.Point(168, 406);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(377, 2);
@@ -392,7 +392,7 @@ namespace ABC_EMPLEADOS.Presentacion
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel5.Location = new System.Drawing.Point(168, 364);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(377, 2);
@@ -422,7 +422,7 @@ namespace ABC_EMPLEADOS.Presentacion
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel4.Location = new System.Drawing.Point(168, 325);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(377, 2);
@@ -544,7 +544,7 @@ namespace ABC_EMPLEADOS.Presentacion
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel2.Location = new System.Drawing.Point(168, 103);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 2);
@@ -563,7 +563,7 @@ namespace ABC_EMPLEADOS.Presentacion
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.Location = new System.Drawing.Point(168, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 2);

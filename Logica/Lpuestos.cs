@@ -8,6 +8,6 @@ namespace ABC_EMPLEADOS.Logica
    public  class Lpuestos
     {
         public int IdPuesto { get; set; }
-        public string puesto { get; set; }
+        public string Puesto { get; set; }
     }
 }

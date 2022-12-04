@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Datos\CONEXIONSQLSERVER.cs" />
     <Compile Include="Datos\Dempleados.cs" />
+    <Compile Include="Datos\Dpuesto.cs" />
     <Compile Include="Logica\Lempleados.cs" />
+    <Compile Include="Logica\Lpuestos.cs" />
     <Compile Include="Presentacion\Empleados.cs">
       <SubType>UserControl</SubType>
     </Compile>
