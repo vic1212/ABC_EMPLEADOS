@@ -126,7 +126,6 @@ namespace ABC_EMPLEADOS.Presentacion
                         parametros.Email = txtEmail.Text;
                         parametros.Telefono = txtTelefono.Text;
                         parametros.IdEmpresa = Convert.ToInt16(cbxEmpresa.SelectedValue);
-                        //MessageBox.Show(fecha_alta);
                         funcion.Insertarempleados(parametros);
                         Mostrarempleados();
                         LimpiarCampos();
@@ -178,7 +177,6 @@ namespace ABC_EMPLEADOS.Presentacion
                         parametros.Email = txtEmail.Text;
                         parametros.Telefono = txtTelefono.Text;
                         parametros.IdEmpresa = Convert.ToInt16(cbxEmpresa.SelectedValue);
-                        //MessageBox.Show(fecha_alta);
                         funcion.Editarempleados(parametros);
                         LimpiarCampos();
                         gpControles.Visible = false;

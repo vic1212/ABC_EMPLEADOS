@@ -12,7 +12,10 @@ namespace ABC_EMPLEADOS.Datos
     public class Dempleados
     {
 
+        //Clase en donde estan todos los metodos que interactuan con la base de datos
 
+
+        //Metodo para cargar el combobox_puesto con los puestos de la base de datos
         public DataTable CargarComboPuesto()
         {
             CONEXIONSQLSERVER.abrir();
@@ -25,6 +28,7 @@ namespace ABC_EMPLEADOS.Datos
 
         }
 
+        //Metodo para cargar el combobox_empresa con la empresa de la base de datos
         public DataTable CargarComboEmpresa()
         {
             CONEXIONSQLSERVER.abrir();
@@ -37,6 +41,7 @@ namespace ABC_EMPLEADOS.Datos
 
         }
 
+        //Metodo para mostrar empleados
         public void MostrarEmpleados(ref DataTable dt)
         {
             try
@@ -56,7 +61,9 @@ namespace ABC_EMPLEADOS.Datos
             }
 
         }
-         public void Insertarempleados(Lempleados parametros)
+
+        //Metodo para insertar empleados
+        public void Insertarempleados(Lempleados parametros)
         {
             try
             {
@@ -87,6 +94,7 @@ namespace ABC_EMPLEADOS.Datos
             }
         }
 
+        //Metodo para editar empleados
         public void Editarempleados(Lempleados parametros)
         {
             try
@@ -120,7 +128,7 @@ namespace ABC_EMPLEADOS.Datos
             }
         }
 
-
+        //Metodo para eliminar empleados
         public void Eliminarempleado(Lempleados parametros)
         {
             try

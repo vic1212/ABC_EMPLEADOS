@@ -12,6 +12,7 @@ namespace ABC_EMPLEADOS.Datos
    public class Dpuesto
     {
 
+        //Metodo para mostrar puestos
         public void MostrarPuestos(ref DataTable dt)
         {
             try
@@ -32,6 +33,7 @@ namespace ABC_EMPLEADOS.Datos
 
         }
 
+        //Metodo para insertar puestos
         public void Insertarpuesto(Lpuestos parametros)
         {
             try
@@ -53,6 +55,7 @@ namespace ABC_EMPLEADOS.Datos
             }
         }
 
+        //Metodo para editar puestos
         public void Editarpuesto(Lpuestos parametros)
         {
             try
@@ -75,7 +78,7 @@ namespace ABC_EMPLEADOS.Datos
             }
         }
 
-
+        //Metodo para eliminar puestos
         public void Eliminarpusto(Lpuestos parametros)
         {
             try

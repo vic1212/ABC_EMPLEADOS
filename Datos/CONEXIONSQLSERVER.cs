@@ -9,9 +9,11 @@ namespace ABC_EMPLEADOS.Datos
 {
    public class CONEXIONSQLSERVER
     {
-        //Nunca va a cambar static
+        //Clase para hacer la conexion a sql server
         public static string conexion = "Data source=DESKTOP-GR1CKGU; Initial Catalog=bdabc_empleados; Integrated Security=true";
         public static SqlConnection conectar = new SqlConnection(conexion);
+
+        //Metodo para abrir una conexion
         public static void abrir()
         {
             if (conectar.State==ConnectionState.Closed)
@@ -20,6 +22,7 @@ namespace ABC_EMPLEADOS.Datos
             }
         }
 
+        //Metodo para cerrar una conexion
         public static void cerrar()
         {
             if (conectar.State == ConnectionState.Open)
